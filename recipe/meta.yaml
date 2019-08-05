@@ -25,8 +25,8 @@ requirements:
     - sed
   host:
     - glib
-    - gsoap =2.7
-    - openssl 1.0.2r
+    - gsoap
+    - openssl
     - gct
     - cgsi-gsoap
 
