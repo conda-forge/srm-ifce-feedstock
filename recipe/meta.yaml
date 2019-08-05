@@ -10,7 +10,7 @@ source:
   sha256: 9bfea03b33c387a37ff454aaed936ac8f17007b92ed6693c790a8365c2c59462
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -25,8 +25,8 @@ requirements:
     - sed
   host:
     - glib
-    - gsoap =2.7
-    - openssl 1.0.2r
+    - gsoap
+    - openssl
     - gct
     - cgsi-gsoap
 
