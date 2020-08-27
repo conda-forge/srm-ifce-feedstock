@@ -22,4 +22,6 @@ cmake -LAH \
     ..
 
 make -j${CPU_COUNT}
+patch -p1 < "${RECIPE_DIR}/0001-Fix-srm2__TPermissionMode.patch"
+make -j${CPU_COUNT}
 make install
