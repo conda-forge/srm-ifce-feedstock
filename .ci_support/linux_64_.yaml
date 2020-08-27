@@ -1,27 +1,23 @@
-CONDA_BUILD_SYSROOT:
-- /opt/MacOSX10.10.sdk
-MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
 c_compiler:
-- clang
+- gcc
 c_compiler_version:
-- '4'
+- '7'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- clangxx
+- gxx
 cxx_compiler_version:
-- '4'
+- '7'
+docker_image:
+- condaforge/linux-anvil-comp7
 glib:
 - '2.58'
-macos_machine:
-- x86_64-apple-darwin13.4.0
-macos_min_version:
-- '10.9'
 openssl:
-- 1.1.1a
+- 1.1.1
 pin_run_as_build:
   openssl:
     max_pin: x.x.x
+target_platform:
+- linux-64
