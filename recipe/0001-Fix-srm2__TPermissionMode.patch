@@ -1,0 +1,39 @@
+From 033ccabd515381ae0d6616ae237628e3c5240627 Mon Sep 17 00:00:00 2001
+From: Chris Burr <christopher.burr@cern.ch>
+Date: Thu, 27 Aug 2020 17:46:12 +0200
+Subject: [PATCH] Fix srm2__TPermissionMode
+
+---
+ src/srmv2/srm.v2.2.h | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/src/srmv2/srm.v2.2.h b/src/srmv2/srm.v2.2.h
+index 8df240a..f4c06cd 100644
+--- a/src/srmv2/srm.v2.2.h
++++ b/src/srmv2/srm.v2.2.h
+@@ -591,14 +591,14 @@ typedef enum srm2__TAccessLatency srm2__TAccessLatency;
+ ///
+ enum srm2__TPermissionMode
+ {
+-	X = 'X',	///< xs:string value="X"
+-	W = 'W',	///< xs:string value="W"
+-	R = 'R',	///< xs:string value="R"
+-	NONE = 89,	///< xs:string value="NONE"
+-	WX = 90,	///< xs:string value="WX"
+-	RX = 91,	///< xs:string value="RX"
+-	RW = 92,	///< xs:string value="RW"
+-	RWX = 93,	///< xs:string value="RWX"
++	NONE,	///< xs:string value="NONE"
++	X,	///< xs:string value="X"
++	W,	///< xs:string value="W"
++	WX,	///< xs:string value="WX"
++	R,	///< xs:string value="R"
++	RX,	///< xs:string value="RX"
++	RW,	///< xs:string value="RW"
++	RWX,	///< xs:string value="RWX"
+ };
+ 
+ /// @brief Typedef synonym for enum srm2__TPermissionMode.
+-- 
+2.28.0
+
