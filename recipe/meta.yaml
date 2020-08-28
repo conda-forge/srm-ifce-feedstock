@@ -10,11 +10,11 @@ source:
   sha256: 9bfea03b33c387a37ff454aaed936ac8f17007b92ed6693c790a8365c2c59462
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
   run_exports:
     # Building with a different gsoap version changes the ABI
-    - {{ pin_subpackage(name, exact=True) }}
+    - {{ pin_compatible(name, exact=True) }}
 
 requirements:
   build:
