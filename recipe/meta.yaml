@@ -25,6 +25,7 @@ requirements:
     - pkg-config
     - sed
   host:
+    - glib
     - gsoap
     - openssl
     - gct
