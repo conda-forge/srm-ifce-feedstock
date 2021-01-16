@@ -5,9 +5,13 @@ Home: https://dmc.web.cern.ch/projects-tags/srm-ifce
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/srm-ifce-feedstock/blob/master/LICENSE.txt)
 
 Summary: Storage Resource Manager Interface
+
+Development: https://gitlab.cern.ch/dmc/srm-ifce
+
+Documentation: https://dmc-docs.web.cern.ch/dmc-docs/srm-ifce.html
 
 srm-ifce is a client side implementation of the
 [SRMv2 specification](https://sdm.lbl.gov/srm-wg/doc/SRM.v2.2.html) for
