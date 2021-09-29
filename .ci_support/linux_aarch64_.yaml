@@ -22,9 +22,6 @@ glib:
 - '2'
 openssl:
 - 1.1.1
-pin_run_as_build:
-  openssl:
-    max_pin: x.x.x
 target_platform:
 - linux-aarch64
 zip_keys:
