@@ -26,8 +26,7 @@ requirements:
     - sed
   host:
     - glib
-    # FIXME: This needs to be added to the global pinning and have the prior builds patched
-    - gsoap =2.8.106
+    - gsoap
     - openssl
     - gct
     - cgsi-gsoap
