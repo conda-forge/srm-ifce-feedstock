@@ -24,6 +24,7 @@ requirements:
     - make
     - pkg-config
     - sed
+    - gsoap
   host:
     - glib
     - gsoap
