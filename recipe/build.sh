@@ -1,24 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
-IFS=$'\n\t'
 
 mkdir build
 cd build
 
-declare -a CMAKE_PLATFORM_FLAGS
-if [ "$(uname)" == "Linux" ]; then
-    # Fix up CMake for using conda's sysroot
-    # See https://docs.conda.io/projects/conda-build/en/latest/resources/compiler-tools.html?highlight=cmake#an-aside-on-cmake-and-sysroots
-    CMAKE_PLATFORM_FLAGS+=("-DCMAKE_TOOLCHAIN_FILE=${RECIPE_DIR}/cross-linux.cmake")
-else
-    CMAKE_PLATFORM_FLAGS+=("-DCMAKE_OSX_DEPLOYMENT_TARGET=${MACOSX_DEPLOYMENT_TARGET}")
-    CMAKE_PLATFORM_FLAGS+=("-DCMAKE_OSX_SYSROOT=${CONDA_BUILD_SYSROOT}")
-fi
-
-cmake -LAH \
-    "${CMAKE_PLATFORM_FLAGS[@]}" \
+cmake ${CMAKE_ARGS} \
     -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
     -DLIB_SUFFIX="" \
+    -DGSOAP_WSDL2H=$BUILD_PREFIX/bin/wsdl2h \
+    -DGSOAP_SOAPCPP2=$BUILD_PREFIX/bin/soapcpp2 \
     ..
 
 make -j${CPU_COUNT}
