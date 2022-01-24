@@ -8,6 +8,8 @@ package:
 source:
   url: https://gitlab.cern.ch/dmc/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
   sha256: d7c6f3e6c4555a1cf7d2d6cb57f6422baa9b676f9e54e40a5557e3fa738e4fc7
+  patches:
+    - 0001-Check-_DARWIN_FEATURE_ONLY_64_BIT_INODE-in-gfal_srm_.patch
 
 build:
   number: 3

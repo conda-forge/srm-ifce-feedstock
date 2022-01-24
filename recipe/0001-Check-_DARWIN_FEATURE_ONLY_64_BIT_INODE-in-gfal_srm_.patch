@@ -1,0 +1,41 @@
+From ead4490a4735f720c6d3bb760b6801a9bc4f035e Mon Sep 17 00:00:00 2001
+From: Chris Burr <christopher.burr@cern.ch>
+Date: Mon, 24 Jan 2022 06:45:23 +0100
+Subject: [PATCH] Check _DARWIN_FEATURE_ONLY_64_BIT_INODE in
+ gfal_srm_ifce_types.h
+
+---
+ src/gfal_srm_ifce_types.h | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/src/gfal_srm_ifce_types.h b/src/gfal_srm_ifce_types.h
+index a9e33d9..e433ca6 100644
+--- a/src/gfal_srm_ifce_types.h
++++ b/src/gfal_srm_ifce_types.h
+@@ -207,7 +207,11 @@ struct srm_xping_output
+ struct srm_mdfilestatus
+ {
+ 	char 	*surl;
++#if defined(_DARWIN_FEATURE_ONLY_64_BIT_INODE)
++	struct stat  	stat;
++#else
+ 	struct stat64	stat;
++#endif
+ 	int		fileid;
+ 	int 	status;
+ };
+@@ -215,7 +219,11 @@ struct srm_mdfilestatus
+ struct srmv2_mdfilestatus
+ {
+ 	char 	*surl;
++#if defined(_DARWIN_FEATURE_ONLY_64_BIT_INODE)
++	struct stat  	stat;
++#else
+ 	struct stat64	stat;
++#endif
+ 	int 	status;
+ 	char 	*explanation;
+ 	struct srmv2_mdfilestatus *subpaths;
+-- 
+2.29.2
+
