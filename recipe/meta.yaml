@@ -12,11 +12,11 @@ source:
     - 0001-Check-_DARWIN_FEATURE_ONLY_64_BIT_INODE-in-gfal_srm_.patch
 
 build:
-  number: 4
+  number: 5
   skip: true  # [win]
   run_exports:
     # Building with a different gsoap version changes the ABI
-    - {{ pin_compatible(name, exact=True) }}
+    - {{ pin_subpackage(name, exact=True) }}
 
 requirements:
   build:
