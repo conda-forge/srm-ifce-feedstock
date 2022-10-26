@@ -17,7 +17,7 @@ gct:
 glib:
 - '2'
 gsoap:
-- 2.8.119
+- 2.8.123
 macos_machine:
 - arm64-apple-darwin20.0.0
 openssl:

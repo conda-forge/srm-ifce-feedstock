@@ -19,7 +19,7 @@ gct:
 glib:
 - '2'
 gsoap:
-- 2.8.119
+- 2.8.123
 openssl:
 - 1.1.1
 target_platform:
