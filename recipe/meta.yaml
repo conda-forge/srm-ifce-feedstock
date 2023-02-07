@@ -1,5 +1,5 @@
 {% set name = "srm-ifce" %}
-{% set version = "1.24.5" %}
+{% set version = "1.24.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://gitlab.cern.ch/dmc/{{ name }}/-/archive/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  sha256: d7c6f3e6c4555a1cf7d2d6cb57f6422baa9b676f9e54e40a5557e3fa738e4fc7
+  sha256: af8d15f416e3fd6dbabee57928c646ff8a8b5a623a212ac9c67bda38bf03cb0b
   patches:
     - 0001-Check-_DARWIN_FEATURE_ONLY_64_BIT_INODE-in-gfal_srm_.patch
 
 build:
-  number: 6
+  number: 0
   skip: true  # [win]
   run_exports:
     # Building with a different gsoap version changes the ABI
