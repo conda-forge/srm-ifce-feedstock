@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '14'
+- '16'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -11,9 +11,9 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '14'
+- '16'
 gct:
-- 6.2.1629922860
+- 6.2.1705709074
 glib:
 - '2'
 gsoap:
